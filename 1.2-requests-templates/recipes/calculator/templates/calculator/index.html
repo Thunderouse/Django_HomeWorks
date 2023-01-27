@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Рецепт {{dish.capitalize}}</title>
+</head>
+<body>
+<p style="color: purple; font-size: 20px"> Рецепт {{dish.capitalize}}: </p>
+{% for ingredient, amount in recipe.items %}
+    <ul style="font-size: 20px">{{ ingredient }}: {{ amount }}</ul>
+{% empty %}
+    <p>Такого рецепта не знаю :(</p>
+{% endfor %}
+<br>
+<p>Выберите количество персон: </p>
+{% for i in range %}
+    <a href="/{{dish}}/?servings={{i}}">{{i}}</a>
+{% endfor %}
+<p>Возврат в главное меню: </p>
+<a href="/">Menu</a>
+</body>
+</html>
