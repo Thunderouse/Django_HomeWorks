@@ -5,7 +5,7 @@ class Phone(models.Model):
     name = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=10, decimal_places=2, null=True)
     image = models.URLField(null=True)
-    release_date = models.IntegerField(null=True)
+    release_date = models.DateField(null=True)
     lte_exists = models.BooleanField()
     slug = models.SlugField(max_length=50)
 

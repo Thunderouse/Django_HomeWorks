@@ -19,6 +19,6 @@ class Command(BaseCommand):
                 name = phone['name'],
                 image = phone['image'],
                 price = phone['price'],
-                release_date = datetime.toordinal(datetime.strptime(phone['release_date'], "%Y-%m-%d")),
+                release_date = (datetime.strptime(phone['release_date'], "%Y-%m-%d")),
                 lte_exists = phone['lte_exists'],).save()
 
